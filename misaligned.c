@@ -45,20 +45,19 @@ int main() {
 
 ColorPair_set Get_Each_ColorPair_set(int n)
 {
-    char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
+    const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
+    const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     
     ColorPair_set ColorPair;
 
-    ColorPair.Maj_Color = majorColor[n/N_MAJ_COLORS];
-    ColorPair.Min_color = minorColor[n%N_MIN_COLORS];
+    ColorPair.Maj_Color = (char*)majorColor[n/N_MAJ_COLORS];
+    ColorPair.Min_color = (char*)minorColor[n%N_MIN_COLORS];
 
     return ColorPair;
 }
 
 int Test_Get_Each_ColorPair_set(int count)
 {
-    
    return count++;
 }
 
