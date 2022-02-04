@@ -41,6 +41,7 @@ void alertInCelcius(float farenheit, networkAlert sendAlert) {
 int main() {
 	
     alertInCelcius(400.5, networkAlertStub_RetNotOk);
+    	assert (alertFailureCount == 1);
     alertInCelcius(303.6, networkAlertStub_RetOk);
 	assert (alertFailureCount == 1);
     printf("%d alerts failed.\n", alertFailureCount);
